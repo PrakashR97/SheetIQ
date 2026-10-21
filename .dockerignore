@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.git
+venv
+.venv
+**/__pycache__
+*.pyc
+.pytest_cache
+.cache
+*.xlsx
+*.xlsm
+*.csv
+tests
+test_python.py
+create_test_excel.py
+frontend

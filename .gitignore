@@ -1,0 +1,15 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+node_modules/
+dist/
+.DS_Store
+# generated test/output spreadsheets
+*.xlsx
+*.xlsm
+*_report.csv
+*_cleaning_report.csv

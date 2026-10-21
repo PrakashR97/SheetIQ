@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    expose:
+      - "8001"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      # Loopback only: the host reverse proxy terminates TLS and forwards here.
+      - "127.0.0.1:${APP_PORT:-8080}:80"

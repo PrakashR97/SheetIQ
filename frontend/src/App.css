@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  color: #111111;
+  background: #ffffff;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NOTHING-INSPIRED HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 6%;
+  border-bottom: 1px solid #111111;
+}
+
+.logo {
+  font-family: 'DM Mono', monospace;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.header-label,
+.eyebrow,
+.section-heading,
+.footer {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* WORKSPACE */
+
+.workspace {
+  width: 100%;
+  max-width: 760px;
+  margin: 75px auto;
+  padding: 0 24px;
+  flex: 1;
+}
+
+/* NOTHING-INSPIRED TYPOGRAPHY */
+
+h1 {
+  font-family: 'DM Mono', monospace;
+  font-size: clamp(34px, 5.5vw, 58px);
+  font-weight: 500;
+  letter-spacing: -2.5px;
+  line-height: 1.15;
+  margin: 16px 0;
+  color: #111111;
+}
+
+h2 {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.intro {
+  max-width: 490px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* PANELS */
+
+.panel {
+  border: 1px solid #111111;
+  padding: 30px;
+  margin-bottom: 24px;
+  background: #ffffff;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* UPLOAD AREA */
+
+.upload-zone {
+  border: 1px dashed #111111;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+  transition: background 0.2s ease;
+}
+
+.upload-zone:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+.upload-zone input {
+  display: none;
+}
+
+.upload-symbol {
+  font-family: 'DM Mono', monospace;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.upload-zone strong {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.upload-zone small,
+.note {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+}
+
+/* SETTINGS */
+
+.settings-heading {
+  margin-top: 36px;
+}
+
+.field-label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #111111;
+  border-radius: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+}
+
+select:focus {
+  outline: 2px solid #111111;
+  outline-offset: 3px;
+}
+
+.note {
+  line-height: 1.6;
+}
+
+/* CLEANING RULES */
+
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 32px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}
+
+/* BUTTONS */
+
+.primary-button {
+  width: 100%;
+  padding: 18px;
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+  border-radius: 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.primary-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.primary-button:not(:disabled):hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.error {
+  margin-top: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* RESULTS */
+
+.result-panel h2 {
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.download-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.download-actions a {
+  display: block;
+  padding: 16px;
+  border: 1px solid #111111;
+  color: #111111;
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.download-actions a:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 6%;
+  border-top: 1px solid #111111;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .header {
+    padding: 20px;
+  }
+
+  .workspace {
+    margin: 40px auto;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  .rules {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+/* NOTHING OS - RED COLOR ONLY */
+
+/* Logo text */
+.logo {
+  color: #e53935;
+}
+
+/* Excel Data Cleaning label */
+.eyebrow {
+  color: #e53935;
+}
+
+/* Upload plus symbol */
+.upload-symbol {
+  color: #e53935;
+}
+
+/* Section heading numbers */
+.section-heading {
+  color: #e53935;
+}
+
+/* Cleaning button */
+.primary-button {
+  background-color: #e53935;
+  color: #ffffff;
+}
+
+/* Button hover - retain original behavior */
+.primary-button:not(:disabled):hover {
+  background-color: #ffffff;
+  color: #e53935;
+}
+
+/* Error text */
+.error {
+  color: #e53935;
+}
+
+/* Download text */
+.download-actions a {
+  color: #e53935;
+}
+
+/* Download hover text */
+.download-actions a:hover {
+  color: #ffffff;
+}
+.footer a,
+.footer a:visited {
+  color: #e53935;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #111111;
+  text-decoration: underline;
+}
