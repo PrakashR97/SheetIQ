@@ -9,7 +9,3 @@ services:
       - traefik.http.routers.sheetiq.entrypoints=websecure
       - traefik.http.routers.sheetiq.tls.certresolver=letsencrypt
       - traefik.http.services.sheetiq.loadbalancer.server.port=80
-      # Basic Auth for the whole app (frontend + /api). Hash lives only in .env: see scripts/set-basic-auth.sh
-      - traefik.http.middlewares.sheetiq-auth.basicauth.users=${BASIC_AUTH_USERS:?run scripts/set-basic-auth.sh first}
-      - traefik.http.middlewares.sheetiq-auth.basicauth.removeheader=true
-      - traefik.http.routers.sheetiq.middlewares=sheetiq-auth
